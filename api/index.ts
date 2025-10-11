@@ -52,6 +52,47 @@ app.get("/videos/popular", async (req: Request, res: Response) => {
 });
 
 /**
+* GET /videos/popular
+* Returns the Pexels JSON of popular videos.
+* Currently fixed at per_page: 3.
+*
+* Responses:
+* - 200 OK: JSON object as returned by Pexels.
+* - 500 : { error: "Failed to fetch popular videos" }
+*/
+app.get("/videos/popular", async (req: Request, res: Response) => {
+  try {
+    const data = await client.videos.popular({ per_page: 3 });
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to fetch popular videos" });
+  }
+});
+
+/**
+* POST /videos/search
+* Returns the Pexels JSON of searched videos.
+* Currently fixed at per_page: 4.
+*
+* Responses:
+* - 200 OK: JSON object as returned by Pexels.
+* - 500 : { error: "Failed to fetch popular videos" }
+*/
+app.post("/videos/search", async (req: Request, res: Response) => {
+  try {
+    const term =req.body.query;
+
+    const data = await client.videos.search({ query:term, per_page: 4 });
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to fetch searched videos" });
+  }
+});
+
+
+/**
 * GET /
 * Simple healthcheck to verify that the server is up.
 */
