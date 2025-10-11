@@ -83,7 +83,7 @@ app.post("/videos/search", async (req: Request, res: Response) => {
   try {
     const term =req.body.query;
 
-    const data = await client.videos.search({ query:term, per_page: 4 });
+    const data = await client.videos.search({ query:term, per_page: 6 });
     res.json(data);
   } catch (err) {
     console.error(err);
