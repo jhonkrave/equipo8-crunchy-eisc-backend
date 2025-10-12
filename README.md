@@ -192,3 +192,4 @@ All endpoints handle errors consistently:
 
 **John Lourido - 1124153**
 **Cristian Guaza - 2372225**
+**Laura Valentina Arbelaez - 2266935**
