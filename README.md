@@ -27,12 +27,19 @@ A modern backend built with Express.js and TypeScript that integrates the Pexels
    cd crunchy-eisc-backend
    ```
 
-2. **Install dependencies**
+2. **Switch to the development branch**
+   ```bash
+   git checkout dev
+   ```
+   
+   ⚠️ **Important**: Make sure you're on the `dev` branch before starting the application.
+
+3. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Configure environment variables**
+4. **Configure environment variables**
    
    Create a `.env` file in the project root:
    ```env
@@ -41,12 +48,12 @@ A modern backend built with Express.js and TypeScript that integrates the Pexels
    ORIGIN=http://localhost:3000,http://localhost:3001
    ```
 
-4. **Get your Pexels API Key**
+5. **Get your Pexels API Key**
    - Go to [Pexels API](https://www.pexels.com/api/)
    - Sign up or log in
    - Generate your free API key
 
-5. **Run the server**
+6. **Run the server**
    ```bash
    npm run dev
    ```
