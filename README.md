@@ -24,7 +24,7 @@ A modern backend built with Express.js and TypeScript that integrates the Pexels
 1. **Clone the repository**
    ```bash
    git clone https://github.com/jhonkrave/equipo8-crunchy-eisc-backend.git
-   cd crunchy-eisc-backend
+   cd equipo8-crunchy-eisc-backend
    ```
 
 2. **Switch to the development branch**
