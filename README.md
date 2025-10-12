@@ -191,3 +191,4 @@ All endpoints handle errors consistently:
 ## 👨‍💻 Authors
 
 **John Lourido - 1124153**
+**Cristian Guaza - 2372225**
